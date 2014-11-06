@@ -1,0 +1,50 @@
+<div class="page-header">
+  <h1>Movies</h1>
+</div>
+
+<p><a href="/movies/new_form" class="btn btn-primary">Add a New Movie</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th>Director ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><img src="<%= movie.image_url %>" width="80"></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.year %></td>
+        <td><%= movie.duration %></td>
+        <td><%= movie.description %></td>
+        <td><%= movie.director_id %></td>
+        <td>
+          <a href="/movies/<%= movie.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/movies/<%= movie.id %>/edit_form" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_movie/<%= movie.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

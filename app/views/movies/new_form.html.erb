@@ -1,0 +1,71 @@
+<div class="page-header">
+  <h1>Add Movie</h1>
+</div>
+
+<form class="form-horizontal">
+  <!-- Label and input for title -->
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">
+      Title
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="title" name="title" placeholder="Title" class="form-control">
+    </div>
+  </div>
+
+  <!-- Label and input for year -->
+  <div class="form-group">
+    <label for="year" class="col-sm-2 control-label">
+      Year
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="year" name="year" placeholder="Year" class="form-control">
+    </div>
+  </div>
+
+  <!-- Label and input for duration -->
+  <div class="form-group">
+    <label for="duration" class="col-sm-2 control-label">
+      Duration
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="duration" name="duration" placeholder="Duration" class="form-control">
+    </div>
+  </div>
+
+  <!-- Label and input for description -->
+  <div class="form-group">
+    <label for="description" class="col-sm-2 control-label">
+      Description
+    </label>
+    <div class="col-sm-10">
+      <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"></textarea>
+    </div>
+  </div>
+
+  <!-- Label and input for image_url -->
+  <div class="form-group">
+    <label for="image_url" class="col-sm-2 control-label">
+      Image url
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="image_url" name="image_url" placeholder="Image url" class="form-control">
+    </div>
+  </div>
+
+  <!-- Label and input for director_id -->
+  <div class="form-group">
+    <label for="director_id" class="col-sm-2 control-label">
+      Director
+    </label>
+    <div class="col-sm-10">
+      <%= select_tag(:director_id, options_from_collection_for_select(Director.all, :id, :name), :class => "form-control") %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Create Movie" class="btn btn-primary">
+    </div>
+  </div>
+</form>

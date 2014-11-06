@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>Movie #<%= @movie.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title</dt>
+  <dd><%= @movie.title %></dd>
+
+  <dt>Year</dt>
+  <dd><%= @movie.year %></dd>
+
+  <dt>Duration</dt>
+  <dd><%= @movie.duration %></dd>
+
+  <dt>Description</dt>
+  <dd><%= @movie.description %></dd>
+
+  <dt>Director ID</dt>
+  <dd><%= @movie.director_id %></dd>
+
+  <dt>Image</dt>
+  <dd><img src="<%= @movie.image_url %>" width="320"></dd>
+
+
+</dl>

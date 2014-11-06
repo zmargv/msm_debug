@@ -1,56 +1,72 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # Route for bare domain:
+  get('/', { :controller => 'movies', :action => 'index' })
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # Routes for the Director resource:
+  # CREATE
+  get('/directors/new_form', { :controller => 'directors', :action => 'new_form' })
+  get('/create_director', { :controller => 'director', :action => 'create_row' })
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  # READ
+  get('/directors', { :controller => 'directors', :action => 'index' })
+  get('/directors/id', { :controller => 'directors', :action => 'show' })
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  # UPDATE
+  get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form' })
+  get('/update_director/:id', { :controller => 'directors', :action => 'update_row' })
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # DELETE
+  get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })
+  #------------------------------
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  # Routes for the Movie resource:
+  # CREATE
+  get('/movies/new_form', { :controller => 'movies', :action => 'new_form' })
+  get('/create_movie', { :controller => 'movies', :action => 'create_row' })
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  # READ
+  get('/movies', { :controller => 'movies', :action => 'index' })
+  get('/movies/:id', { :controller => 'movies', :action => 'show' })
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+  # UPDATE
+  get('/movies/:id/edit_form', { :controller => 'movies', :action => 'edit_form' })
+  get('/update_movie/:id', { :controller => 'movies', :action => 'update_row' })
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+  # DELETE
+  get('/delete_movie/:id', { :controller => 'movies', :action => 'destroy' })
+  #------------------------------
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  # Routes for the Role resource:
+  # CREATE
+  get('/roles/new_form', { :controller => 'roles', :action => 'new_form' })
+  get('/create_role', { :controller => 'roles', :action => 'create_row' })
+
+  # READ
+  get('/roles', { :controller => 'roles', :action => 'index' })
+  get('/roles/:id', { :controller => 'roles', :action => 'show' })
+
+  # UPDATE
+  get('/roles/:id/edit_form', { :controller => 'roles', :action => 'edit_form' })
+  get('/update_role/:id', { :controller => 'roles', :action => 'update_row' })
+
+  # DELETE
+  get('/delete_role/:id', { :controller => 'roles', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Actor resource:
+  # CREATE
+  get('/actors/new_form', { :controller => 'actors', :action => 'new_form' })
+  get('/create_actor', { :controller => 'actors', :action => 'create_row' })
+
+  # READ
+  get('/actors', { :controller => 'actors', :action => 'index' })
+  get('/actors/:id', { :controller => 'actors', :action => 'show' })
+
+  # UPDATE
+  get('/actors/:id/edit_form', { :controller => 'actors', :action => 'edit_form' })
+  get('/update_actor/:id', { :controller => 'actors', :action => 'update_row' })
+
+  # DELETE
+  get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy' })
+  #------------------------------
 end
