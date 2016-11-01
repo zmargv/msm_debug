@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,43 +28,27 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-end
-
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-end
-
-
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'pry-byebug'
-  gem 'pry-rails'
   gem 'rspec-rails'
 end
 
 group :development do
-  gem 'administrate'
   gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'letter_opener'
   gem 'quiet_assets'
-  gem 'sqlite3'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
+gem 'sqlite3'
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'percy-capybara'
   gem 'shoulda-matchers'
   gem 'webmock'
 end

@@ -31,7 +31,7 @@ Use the detailed README of the Photogram Golden Seven project as a reference.
 
 ## Setup
 
- 1. Clone and branch.
+ 1. First **fork**, and *then* clone.
  1. `cd` to the root folder of the app.
  1. `bundle install`
  1. `rake db:migrate` (To create the four tables on your machine; I have already written the instructions to do so.)
@@ -49,3 +49,5 @@ From here, click through the app and debug. Try adding a new movie, updating a m
 Sometimes you will get an error message; sometimes there won't be an error message, but the action just won't do its job. Use the server log to help figure out what's going on.
 
 After Movies, work on Directors, then Actors, then Roles.
+
+To submit, sync your work to your fork (often) and `rake grade` (often).
