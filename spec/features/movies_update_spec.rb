@@ -40,7 +40,7 @@ feature "UPDATE:" do
     expect(page).to have_selector("input[value='#{movie.duration}']")
     expect(page).to have_field('Description', with: "#{movie.description}")
     expect(page).to have_selector("input[value='#{movie.image_url}']")
-    expect(page).to have_select('director_id', selected: "#{movie_director.name}")
+    expect(page).to have_select('Director', selected: "#{movie_director.name}")
   end
 
   scenario "UPDATE_ROW: movies#update_row updates row", points: 1 do
