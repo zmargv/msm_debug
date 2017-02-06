@@ -34,8 +34,8 @@ Use the detailed README of the Photogram Golden Seven project as a reference.
  1. First **fork**, and *then* clone.
  1. `cd` to the root folder of the app.
  1. `bundle install`
- 1. `rake db:migrate` (To create the four tables on your machine; I have already written the instructions to do so.)
- 1. `rake db:seed` (to pre-populate your tables with some data, so we can get straight to work. This step may take a while on Windows machines. You can open a new Command Line window to continue working while it runs.)
+ 1. `rails db:migrate` (To create the four tables on your machine; I have already written the instructions to do so.)
+ 1. `rails db:seed` (to pre-populate your tables with some data, so we can get straight to work. This step may take a while on Windows machines. You can open a new Command Line window to continue working while it runs.)
  1. `rails server`
 
 Navigate to
@@ -50,4 +50,4 @@ Sometimes you will get an error message; sometimes there won't be an error messa
 
 After Movies, work on Directors, then Actors, then Roles.
 
-To submit, sync your work to your fork (often) and `rake grade` (often).
+To submit, sync your work to your fork (often) and `rails grade` (often).
