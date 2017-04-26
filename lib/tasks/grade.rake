@@ -1,3 +1,5 @@
+require "net/https"
+
 if RUBY_PLATFORM =~ /darwin/
 
   desc "Grade project on OS X"
