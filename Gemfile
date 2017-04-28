@@ -43,6 +43,7 @@ group :development do
   gem 'letter_opener'
   gem 'listen'
   gem 'wdm' if Gem.win_platform?
+  gem "pry-rails"
 end
 
 gem 'sqlite3'
