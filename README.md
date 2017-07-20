@@ -31,16 +31,11 @@ Use the detailed README of the Photogram Golden Seven project as a reference.
 
 ## Setup
 
- 1. First **fork**, and *then* clone.
- 1. `cd` to the root folder of the app.
- 1. `bundle install`
- 1. `rails db:migrate` (To create the four tables on your machine; I have already written the instructions to do so.)
- 1. `rails db:seed` (to pre-populate your tables with some data, so we can get straight to work. This step may take a while on Windows machines. You can open a new Command Line window to continue working while it runs.)
- 1. `rails server`
-
-Navigate to
-
-http://localhost:3000
+1. Ensure that you've forked this repo to your own GitHub account.
+1. Set up [a Cloud9 workspace as usual](https://guides.firstdraft.com/getting-started-with-cloud-9.html) based on this repo.
+1. `bin/setup`
+1. Run Project
+1. Navigate to the live app in Chrome.
 
 You should see a list of movies. The `Movies#index` action is functional, and I have set it to be the root URL.
 
@@ -49,5 +44,3 @@ From here, click through the app and debug. Try adding a new movie, updating a m
 Sometimes you will get an error message; sometimes there won't be an error message, but the action just won't do its job. Use the server log to help figure out what's going on.
 
 After Movies, work on Directors, then Actors, then Roles.
-
-To submit, sync your work to your fork (often) and `rails grade` (often).
