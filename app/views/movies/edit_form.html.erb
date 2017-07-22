@@ -39,7 +39,7 @@
       Description
     </label>
     <div class="col-sm-10">
-      <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @movie.description %></textarea>
+      <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3" value="<%= @movie.description %>"><%= @movie.description %></textarea>
     </div>
   </div>
 
@@ -58,7 +58,7 @@
     <label for="director_id" class="col-sm-2 control-label">
       Director
     </label>
-    <div class="col-sm-10">
+    <div class="col-sm-10" value="<%= @movie.director_id %>">
       <%= select_tag(:director_id, options_from_collection_for_select(Director.all, :id, :name, @movie.director_id), :class => "form-control") %>
     </div>
   </div>
