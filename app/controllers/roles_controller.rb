@@ -5,6 +5,7 @@ class RolesController < ApplicationController
 
   def show
     @role = Role.find(params[:id])
+    render("roles/show_details.html.erb")
   end
 
   def new_form
@@ -18,7 +19,7 @@ class RolesController < ApplicationController
 
     @role.save
 
-    render("show")
+    render("roles/show_details.html.erb")
   end
 
   def edit_form
@@ -34,7 +35,7 @@ class RolesController < ApplicationController
 
     @role.save
 
-    render("show")
+    render("roles/show_details.html.erb")
   end
 
   def destroy
