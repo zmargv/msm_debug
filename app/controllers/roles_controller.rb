@@ -34,8 +34,8 @@ class RolesController < ApplicationController
     @role.actor_id = params[:actor_id]
 
     @role.save
-    
-    render("roles/show_details.html.erb")
+    redirect_to "/roles/"+params[:id];
+    # render("roles/show_details.html.erb")
   end
 
   def destroy
