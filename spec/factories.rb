@@ -6,7 +6,7 @@ FactoryGirl.define do
     duration 180
     description "Not a real movie"
     image_url "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Lake_Bondhus_Norway_2862.jpg/1280px-Lake_Bondhus_Norway_2862.jpg"
-    director_id 1
+    director
   end
 
   factory :director do
@@ -25,7 +25,7 @@ FactoryGirl.define do
 
   factory :role do
     character_name "Superman"
-    movie_id 1
-    actor_id 1
+    movie
+    actor
   end
 end
